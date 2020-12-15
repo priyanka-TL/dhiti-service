@@ -1,15 +1,15 @@
 FROM node:12
 
-WORKDIR /manage-learn-services/dhiti-service
+WORKDIR /opt/dhiti
 
 #copy package.json file
-COPY package.json /manage-learn-services/dhiti-service
+COPY package.json /opt/dhiti
 
 #install node packges
 RUN npm install
 
 #copy all files 
-COPY . /manage-learn-services/dhiti-service
+COPY . /opt/dhiti
 
 #expose the application port
 EXPOSE 4700
